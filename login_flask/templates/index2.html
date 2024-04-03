@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel='icon' href='{{ url_for('static', filename="img/iconos.png") }}' type="image/x-icon">
+    <style>
+        *{
+            margin: 0;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        
+        .registro{
+            background-color:  #bc93e4;
+            width: 400px;
+            height: 400px;
+            margin: 50px auto;
+            text-align: center;
+            padding: 1rem;
+            border-radius: 9px;
+        }
+        
+        .registro-title{
+            font-size: 40px;
+            color: black;
+            margin-bottom: 20px;
+        }
+        
+        .registro label, input{
+            display: block;
+            margin: 0 auto;
+        }
+        
+        .registro label{
+            font-size: 15px;
+            margin: 5PX;
+            color:  black;
+        }
+        
+        .registro input{
+            background-color:  #ffffff ;
+            width: 300px;
+            padding: .5rem;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+        }
+        
+        
+        .registro button{
+            font-family: cursive;
+            background-color:  #9e2b96 ;
+            color:  #ffffff;
+            font-size: 20px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 30px;
+            padding: .6rem;
+            width: 180px;
+            outline: none;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="registro">
+
+        <h1 class="registro-title">Registro</h1>
+
+        <form action="/registro" method="post">
+            <label for="full-name">full name:</label>
+            <input type="text" name="full-name" id="full-name" placeholder="full name" required>
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Email" required>
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password" placeholder="Password" required>
+            <label for="phone">Number phone:</label>
+            <input type="tel" name="phone" id="phone" placeholder="Number phone" required>
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+</body>
+</html>
