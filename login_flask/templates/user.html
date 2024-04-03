@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/user.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/login.png') }}" type="image/x-icon">
+    <style>
+        .user{
+            margin: 100px auto;
+            padding: 2rem;
+            width: 250px;
+            height: auto;
+            text-align: center;
+            border: 4px solid black;
+            border-radius: 10px;
+            box-shadow: 4px 4px 30px rgba(0, 0, 0, 0.418);
+        }
+        
+        .user img{
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            border-radius: 100%;
+            box-shadow: 8px 8px 10px rgba(0, 0, 0, 0.372);
+        }
+        
+        .user h1{
+            font-size: 30px;
+            color: rgb(102, 102, 129);
+        }
+        
+        .user p{
+            font-size: 20px;
+            color: rgb(102, 102, 129);
+        }
+    </style>
+</head>
+<body>
+    <div class="user">
+        <img src="{{ url_for('static', filename='img/login.png') }}" alt="">
+        <h1>Hola {{ nombre }}</h1>
+        <p>Tu email es: {{ coreo }}</p>
+    </div>
+</body>
+</html>

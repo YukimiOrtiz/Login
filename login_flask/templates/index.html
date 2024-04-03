@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <link rel="icon" href="{{ url_for('static', filename='img/login.png') }}" type="image/x-icon">
+    <style>
+        *{
+    font-family: cursive;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.title{
+    font-size: 40px;
+    text-align: center;
+    padding: 1rem;
+    margin: 0;
+    background-color: blanchedalmond;
+
+}
+
+.login{
+    width: 300px;
+    margin: 50px auto;
+    padding: 2rem ;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 30px;
+    box-shadow: 5px 5px 50px cornflowerblue;
+}
+
+label{
+    font-size: 20px;
+}
+
+input{
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
+    width: 250px;
+    border:  greenyellow;
+    border-radius: 10px;
+}
+
+button{
+    margin-top: 30px;
+    width: 100px;
+    font-size: 20px;
+    padding: 9px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+}
+    </style>
+</head>
+<body>
+    <h1 class='title'>Login Flak</h1>
+
+    <div class="login">
+        <form action="/login" method="post">
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre" required>
+            <label for="email">Correo Electronico:</label>
+            <input type="email" name="email" id="email" placeholder="Coreo Electronico" required>
+            <label for="password">Contraseña:</label>
+            <input type="password" name="password" id="password" placeholder="Contraseña" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>
