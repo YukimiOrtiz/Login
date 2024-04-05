@@ -9,10 +9,10 @@ def index():
 @app.route('/login', methods=['POST'])
 def login():
     nombre = request.form['nombre']
-    coreo = request.form['email']
+    correo = request.form['email']
     password = request.form['password']
     
-    return render_template('user.html', nombre=nombre, coreo=coreo, password=password)
+    return render_template('user.html', nombre=nombre, correo=correo, password=password)
 
 if __name__ == "__main__":
     app.run( debug=True)
